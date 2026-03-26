@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import connectDB from "../server/config/db.js";
+import connectDB from "./db.js";
 import multer from "multer";
 import nodemailer from "nodemailer";
 
