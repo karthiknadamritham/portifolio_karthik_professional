@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --skin: #f5c6a5;
+  --skin-rgb: 245, 198, 165;
+}
+
+/* Theme refresh trigger */
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 7s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover,
+.group\/card:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+html {
+  scroll-behavior: smooth;
+  cursor: none;
+}
+
+body {
+  cursor: none;
+}
+
+/* Ensure links and buttons don't show the default pointer either */
+a, button, [role="button"], input, select, textarea {
+  cursor: none !important;
+}
+
+.group:hover .pause-on-hover {
+  animation-play-state: paused !important;
+}
+
+/* Glow effects for themeColor globally */
+@layer utilities {
+  .text-themeColor {
+    color: var(--skin);
+    text-shadow: 0 0 6px var(--skin), 0 0 3px var(--skin);
+  }
+  .bg-themeColor {
+    background-color: rgb(var(--skin-rgb));
+    box-shadow: 0 0 2px var(--skin), 0 0 2px var(--skin), inset 0 0 2px var(--skin);
+  }
+  .border-themeColor {
+    border-color: var(--skin);
+    box-shadow: 0 0 2px var(--skin), inset 0 0 2px var(--skin);
+  }
+}
+
+/* For elements explicitly using color/background hashes if any */
+[style*="#f5c6a5"] {
+  box-shadow: 0 0 10px var(--skin);
+  text-shadow: 0 0 10px var(--skin);
+}
