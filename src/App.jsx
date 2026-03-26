@@ -1179,7 +1179,7 @@ function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="relative flex flex-col md:flex-row items-center md:items-end justify-center min-h-screen px-4 md:px-20 w-full bg-[#fafafa] dark:bg-black transition-colors duration-300 pt-10"
+          className="relative flex flex-col md:flex-row items-center md:items-end justify-center h-screen min-h-[600px] md:min-h-[800px] px-4 md:px-20 w-full bg-[#fafafa] dark:bg-black transition-colors duration-300 pt-16 overflow-hidden"
         >
           {/* Theme Toggle - Top Right Corner of Hero Section */}
           <div className="absolute top-24 right-4 md:top-24 md:right-10 z-50">
@@ -1374,7 +1374,7 @@ function App() {
                 src="/myself.jpg"
                 alt="Myself"
                 id="pict"
-                className="w-[350px] md:w-[700px] lg:w-[900px] object-cover relative z-10 hover:scale-[1.02] transition-transform duration-500"
+                className="w-[320px] md:w-[650px] lg:w-[850px] max-h-[85vh] object-contain relative z-10 hover:scale-[1.02] transition-transform duration-500"
               />
             </div>
           </motion.div>
